@@ -1,0 +1,46 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "pack.name",
+		"description": "pack.description",
+		"min_engine_version": [
+			1,
+			21,
+			80
+		],
+		"uuid": "e2d2ec99-1bcd-4017-91d2-fde0f4f51df5",
+		"version": [
+			1,
+			2,
+			5
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "35c78a68-05dd-4375-aae1-ef590bd58ca7",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "cbe60af8-5773-4dec-bf17-0dd89fa29b52",
+			"version": [
+				1,
+				2,
+				5
+			]
+		}
+	],
+	"metadata": {
+		"authors": [
+			"LeonidaMan6552"
+		],
+		"product_type": "addon",
+		"license": "Creative Commons NonCommercial (CC BY-NC 4.0)"
+	}
+}

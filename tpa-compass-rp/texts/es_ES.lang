@@ -1,0 +1,16 @@
+pack.name=Sistema TPA de vainilla de Leo RP
+pack.description=¡Encanta tu mundo con la habilidad TPA añadida a tu brújula normal!
+tpa:toggle.on=§2§l--- Activado ---
+tpa:toggle.off=§4§l--- Desactivado ---
+tpa:players.list_title=Brújula TPA
+tpa:players.list_body=Elige un jugador para enviarle una solicitud...
+tpa:no_players=estás solo en este mundo
+tpa:asked=%1 ya está recibiendo una solicitud
+tpa:prevent=%1 ha desactivado las solicitudes de teletransporte
+tpa:accept=%1 ha aceptado tu solicitud
+tpa:reject=%1 ha rechazado tu solicitud
+tpa:not_found=no se pudo encontrar a ese jugador...
+tpa:ask.body=§b§l%1§r quiere teletransportarse a tu ubicación actual
+tpa:ask.accept=aceptar
+tpa:ask.reject=rechazar
+tpa:ask.cooldown=§4§lEstás en un enfriamiento, inténtelo de nuevo más tarde.

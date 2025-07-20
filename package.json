@@ -1,0 +1,24 @@
+{
+  "name": "tpa-compass",
+  "version": "1.3.5",
+  "description": "Add more functionality to your compass!",
+  "main": "tpa-compass-bp/scripts/index.js",
+  "type": "module",
+  "author": "Leonidaaa",
+  "license": "MIT",
+  "keywords": [
+    "Minecraft-bedrock-addon"
+  ],
+  "dependencies": {
+    "@minecraft/server": "^1.19.0",
+    "@minecraft/server-ui": "^1.3.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.8"
+  },
+  "scripts": {
+    "compile": "esbuild --entry-points=tpa-compass-bp/src/index.ts --outdir=tpa-compass-bp/scripts --platform=node --bundle --format=esm --target=es2021 --minify --log-level=info --external:@minecraft/server --external:@minecraft/server-ui",
+    "zip": "zip -r tpa-compass.mcaddon tpa-compass-bp tpa-compass-rp -x 'tpa-compass-bp/src/*' 'tpa-compass-bp/package.json' 'tpa-compass-bp/package-lock.json' 'tpa-compass-bp/node_modules/*'",
+    "watch": "npm run compile -- --watch"
+  }
+}

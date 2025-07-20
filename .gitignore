@@ -1,0 +1,29 @@
+# Node
+node_modules/
+package-lock.json
+
+# Output
+tpa-compass.mcaddon
+
+# IDE/editor
+*.log
+*.tmp
+.vscode/
+.idea/
+.DS_Store
+
+# OS/Terminal
+*.swp
+*.swo
+
+# Backup
+*.bak
+*~
+
+# Helix, Neovim, etc.
+helix.lock
+tags
+session.*
+
+# Optional: ignore compiled maps if you ever enable them
+*.js.map

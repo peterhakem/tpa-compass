@@ -1,0 +1,16 @@
+pack.name=Système TPA vanille de Leo RP
+pack.description=enchante ton monde avec la capacité TPA ajoutée à ta boussole normale !
+tpa:toggle.on=§2§l--- Activé ---
+tpa:toggle.off=§4§l--- Désactivé ---
+tpa:players.list_title=Boussole TPA
+tpa:players.list_body=Choisis un joueur à qui envoyer une demande...
+tpa:no_players=tu es seul dans ce monde
+tpa:asked=%1 reçoit déjà une demande
+tpa:prevent=%1 a désactivé les demandes de téléportation
+tpa:accept=%1 a accepté ta demande
+tpa:reject=%1 a refusé ta demande
+tpa:not_found=ce joueur est introuvable...
+tpa:ask.body=§b§l%1§r veut se téléporter à ta position actuelle
+tpa:ask.accept=accepter
+tpa:ask.reject=refuser
+tpa:ask.cooldown=§4§lVous êtes dans un temps de recharge, réessayez plus tard.

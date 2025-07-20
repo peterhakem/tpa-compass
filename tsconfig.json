@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "ES2020",
+    "target": "ES2021",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./tpa-compass-bp/src",
+    "rootDir": "./tpa-compass-bp/src",
+    "outDir": "./tpa-compass-bp/scripts"
+  },
+  "exclude": [
+    "./tpa-compass-bp/node_modules"
+  ],
+  "include": [
+    "./tpa-compass-bp/src"
+  ]
+}
