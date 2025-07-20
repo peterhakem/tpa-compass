@@ -1,16 +1,26 @@
-pack.name=Leo's vanilla tpa system RP
-pack.description=enchant your world with tpa ability added to your normal compass!
-tpa:toggle.on=§2§l--- Toggle ON ---
-tpa:toggle.off=§4§l--- Toggle OFF ---
-tpa:players.list_title=Tpa compass
-tpa:players.list_body=Choose a player to send a to request to...
-tpa:no_players=you're alone in this world
-tpa:asked=%1 is already being asked at the moment
-tpa:prevent=%1 has turned off teleportation requests
-tpa:accept=%1 has accepted your request
-tpa:reject=%1 has rejected your request
-tpa:not_found=couldn't find that player anymore...
-tpa:ask.body=§b§l%1§r wants to teleport to your current location
-tpa:ask.accept=accept
-tpa:ask.reject=reject
-tpa:ask.cooldown=§cYou're in a cooldown, try again later.
+pack.name=Leo's Vanilla TPA System RP
+pack.description=Enchant your world with TPA ability added to your ordinary compass!
+
+tpa:toggle.on=§2§l--- TPA Enabled ---
+tpa:toggle.off=§4§l--- TPA Disabled ---
+
+tpa:players.list_title=TPA Compass
+tpa:players.list_body=Choose a player to send a teleport request to...
+tpa:no_players=You're alone in this world.
+tpa:asked=%1 is already being asked right now.
+tpa:prevent=%1 has disabled teleport requests.
+tpa:accept=%1 accepted your teleport request.
+tpa:reject=%1 rejected your teleport request.
+tpa:not_found=Couldn't find that player anymore...
+
+tpa:ask.body=§b§l%1§r wants to teleport to your current location.
+tpa:ask.accept=Accept
+tpa:ask.reject=Reject
+tpa:ask.cooldown=§cYou're on cooldown. Please wait before sending another request.
+
+tpa:tpa=Teleport to player
+tpa:tpa_here=Ask player to teleport here
+tpa:back=Back
+tpa:ask_here_body=§b§l%1§r is asking you to teleport to them.
+tpa:accept_player=You accepted %1's teleport request.
+tpa:accept_target=%1 is now teleporting to you.

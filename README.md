@@ -22,9 +22,9 @@ A lightweight and practical Minecraft Bedrock addon for multiplayer worlds where
 
 ---
 
-### 📦 Installation (For Players)
+### 📦 Installation
 
-1. Download the `.mcaddon` from [Releases](https://github.com/your-username/tpa-compass/releases).
+1. Download the `.mcaddon` from Curseforge or Github
 2. Open it with Minecraft.
 3. Both RP and BP will import automatically.
 4. Add them to your world (enable either one — the other gets enabled too).
@@ -35,17 +35,17 @@ A lightweight and practical Minecraft Bedrock addon for multiplayer worlds where
 ### 🧪 How to Use
 
 - Hold a compass and interact to request a teleport.
-- Your friend will get a nice little prompt to accept or deny.
+- Your friend will get a nice little prompt to accept or reject.
 - To craft a compass:  
-  Place **1 iron ingot** in the center of the grid, surround it with **4 redstone dust**.  
+  Place **1 redstone dust** in the center of the grid, surround it with **4 iron ingots**.  
   (Requires a crafting table.)
 
 ---
 
-### 🛠 Development Setup (For Devs)
+### Development Setup (For Devs)
 
 ```bash
-git clone https://github.com/your-username/tpa-compass.git
+git clone https://github.com/peter/tpa-compass.git
 cd tpa-compass
 npm install
 ```
@@ -70,26 +70,25 @@ This will:
 
 ---
 
-### 🧠 How to Load In-Dev
+### How to Load in minecraft
 
-- Enable Developer Mode in Minecraft Bedrock (via options or behavior).
 - Use the `.mcaddon` from the root (run `npm run zip` first).
 - Or manually copy `tpa-compass-bp` and `tpa-compass-rp` into the `com.mojang` `development_behavior_packs` and `development_resource_packs` folders.
 
 ---
 
-### 📖 License
+### License
 
 This project is open source and licensed under the **MIT License**.
 
 - ✅ Free to use, modify, and redistribute
 - ✅ Commercial use allowed
-- 🔗 See `LICENSE` for full terms
+- See `LICENSE` for full terms
 
 ---
 
 > Made with love by Leonidaaa  
-> PRs welcome. Don’t spam your friends.
+> PRs welcome.
 
 
 ---
@@ -104,10 +103,3 @@ If you find bugs, have feature ideas, or want to improve translations, feel free
 3. Make your changes
 4. Commit and push (`git commit -m "Add thing" && git push`)
 5. Open a pull request
-
-Make sure your changes don't break the addon and follow the existing structure.
-
----
-
-> Made with love by Leonidaaa  
-> PRs welcome. Don’t spam your friends.
