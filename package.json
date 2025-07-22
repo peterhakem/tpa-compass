@@ -17,7 +17,7 @@
     "esbuild": "^0.25.8"
   },
   "scripts": {
-    "compile": "esbuild --entry-points=tpa-compass-bp/src/index.ts --outdir=tpa-compass-bp/scripts --platform=node --bundle --format=esm --target=es2021 --minify --log-level=info --external:@minecraft/server --external:@minecraft/server-ui",
+    "compile": "esbuild tpa-compass-bp/src/index.ts --outdir=tpa-compass-bp/scripts --platform=node --bundle --format=esm --target=es2021 --minify --log-level=info --external:@minecraft/server --external:@minecraft/server-ui",
     "zip": "zip -r tpa-compass.mcaddon tpa-compass-bp tpa-compass-rp -x 'tpa-compass-bp/src/*' 'tpa-compass-bp/package.json' 'tpa-compass-bp/package-lock.json' 'tpa-compass-bp/node_modules/*'",
     "watch": "npm run compile -- --watch"
   }

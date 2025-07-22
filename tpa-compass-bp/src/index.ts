@@ -83,16 +83,16 @@ function playerListMenu(player: Player): void {
 		return;
 	};
 
-	const otherPlayers = players.filter(p => p.name !== player.nameTag);
+	const otherPlayers = players.filter(p => p.name !== player.name);
 
 	for (const plr of otherPlayers) {
 		form.button(plr.name, "textures/ui/players");
 	}
 
 	form.show(player).then(response => {
-		if (response.canceled || !response.selection) return;
+		if (response.canceled || response.selection === undefined) return;
 
-		const target = players[response.selection]
+		const target = otherPlayers[response.selection]
 
 
 		if (target) {
@@ -114,7 +114,7 @@ function playerListMenu(player: Player): void {
 function askMenu(player: Player, target: Player): void {
 	const form = new ActionFormData()
 		.title(target.nameTag)
-		.body("") // Empty body to avoid visual bugs
+		.body(" ") // Empty body to avoid visual bugs
 		.button({ translate: Translate.tpa })
 		.button({ translate: Translate.tpahere })
 		.button({ translate: Translate.back });
@@ -124,7 +124,7 @@ function askMenu(player: Player, target: Player): void {
 
 		switch (response.selection) {
 			case 0:
-				ask(target, player);
+				ask(player, target);
 				break;
 			case 1:
 				askhere(target, player)
@@ -148,7 +148,7 @@ async function ask(player: Player, target: Player): Promise<void> {
 		.button2({ translate: Translate.AskReject });
 
 
-	player.addTag("asked")
+	target.addTag("asked")
 	const res = await form.show(player);
 	if (res.canceled || res.selection === undefined) return;
 	if (res.selection === 0) {
@@ -165,10 +165,11 @@ async function ask(player: Player, target: Player): Promise<void> {
 		target.addTag("cooldown")
 
 		system.runTimeout(() => {
-			if (player?.hasTag("cooldown")) return player.removeTag("cooldown");
-		}, TicksPerSecond * 20) // 20 seconds
+			if (target?.hasTag("cooldown")) return target?.removeTag("cooldown");
+		}, TicksPerSecond * 10) // 10 seconds
 
 	} else {
+		target.removeTag("asked")
 		target.sendMessage({ translate: Translate.Reject, with: [player.nameTag] });
 	}
 }
@@ -184,8 +185,8 @@ async function askhere(target: Player, player: Player): Promise<void> {
 		.button1({ translate: Translate.AskAccept })
 		.button2({ translate: Translate.AskReject });
 
-	player.addTag("asked")
-	const res = await form.show(player);
+	target.addTag("asked")
+	const res = await form.show(target);
 	if (res.canceled || res.selection === undefined) return;
 	if (res.selection === 0) {
 		player.sendMessage({ translate: Translate.AcceptPlayer, with: [target.name] });
@@ -201,10 +202,11 @@ async function askhere(target: Player, player: Player): Promise<void> {
 		target.addTag("cooldown")
 
 		system.runTimeout(() => {
-			if (player?.hasTag("cooldown")) return player.removeTag("cooldown");
+			if (target?.hasTag("cooldown")) return target?.removeTag("cooldown");
 		}, TicksPerSecond * 20) // 20 seconds
 
 	} else {
+		target.removeTag("asked")
 		target.sendMessage({ translate: Translate.Reject, with: [player.nameTag] });
 	}
 }
